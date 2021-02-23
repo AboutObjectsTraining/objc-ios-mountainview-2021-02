@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB34510C1806EA5900EEF511"
-               BuildableName = "ANSI C Labs"
-               BlueprintName = "ANSI C Labs"
-               ReferencedContainer = "container:ANSI C Labs.xcodeproj">
+               BlueprintIdentifier = "B4389BBC25E47B80003A0F0A"
+               BuildableName = "Peeps.framework"
+               BlueprintName = "Peeps"
+               ReferencedContainer = "container:Peeps.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,16 +27,17 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB34510C1806EA5900EEF511"
-            BuildableName = "ANSI C Labs"
-            BlueprintName = "ANSI C Labs"
-            ReferencedContainer = "container:ANSI C Labs.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B4389BC525E47B80003A0F0A"
+               BuildableName = "PeepsTests.xctest"
+               BlueprintName = "PeepsTests"
+               ReferencedContainer = "container:Peeps.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -49,16 +50,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB34510C1806EA5900EEF511"
-            BuildableName = "ANSI C Labs"
-            BlueprintName = "ANSI C Labs"
-            ReferencedContainer = "container:ANSI C Labs.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -66,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB34510C1806EA5900EEF511"
-            BuildableName = "ANSI C Labs"
-            BlueprintName = "ANSI C Labs"
-            ReferencedContainer = "container:ANSI C Labs.xcodeproj">
+            BlueprintIdentifier = "B4389BBC25E47B80003A0F0A"
+            BuildableName = "Peeps.framework"
+            BlueprintName = "Peeps"
+            ReferencedContainer = "container:Peeps.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

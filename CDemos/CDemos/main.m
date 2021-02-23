@@ -20,9 +20,9 @@ void DoPointerStuff(void) {
 }
 
 void DoStringStuff(void) {
-    char letters1[] = { 'a', 'b', 'c', '\0' };
-    char letters2[] = { 97, 98, 99, 0 };
-    char letters3[] = "zyz";
+//    char letters1[] = { 'a', 'b', 'c', '\0' };
+//    char letters2[] = { 97, 98, 99, 0 };
+//    char letters3[] = "zyz";
     
     char arrayOfChars[] = {'a', 'b', 'c'};
     
