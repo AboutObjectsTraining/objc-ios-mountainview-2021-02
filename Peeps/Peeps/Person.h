@@ -9,11 +9,20 @@
     NSInteger _age;
 }
 
+- (instancetype)initWithFirstName:(NSString *)firstName
+                         lastName:(NSString *)lastName
+                              age:(NSInteger)age;
+
+- (instancetype)initWithFirstName:(NSString *)firstName
+                         lastName:(NSString *)lastName;
+
 - (NSString *)firstName;
 - (void)setFirstName:(NSString *)newValue;
 
 - (NSString *)lastName;
 - (void)setLastName:(NSString *)newValue;
+
+- (NSString *)fullName;
 
 - (NSInteger)age;
 - (void)setAge:(NSInteger)newValue;
