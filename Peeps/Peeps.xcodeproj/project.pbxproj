@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B424BFA325E5A54A001C423D /* Dog.h in Headers */ = {isa = PBXBuildFile; fileRef = B424BFA125E5A54A001C423D /* Dog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B424BFA425E5A54A001C423D /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = B424BFA225E5A54A001C423D /* Dog.m */; };
+		B424BFAA25E5C6B6001C423D /* ClassClusterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B424BFA925E5C6B6001C423D /* ClassClusterTests.m */; };
 		B4389BC725E47B80003A0F0A /* Peeps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4389BBD25E47B80003A0F0A /* Peeps.framework */; };
 		B4389BCC25E47B80003A0F0A /* PersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4389BCB25E47B80003A0F0A /* PersonTests.m */; };
 		B4389BCE25E47B80003A0F0A /* Peeps.h in Headers */ = {isa = PBXBuildFile; fileRef = B4389BC025E47B80003A0F0A /* Peeps.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		B424BFA125E5A54A001C423D /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		B424BFA225E5A54A001C423D /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		B424BFA925E5C6B6001C423D /* ClassClusterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassClusterTests.m; sourceTree = "<group>"; };
 		B4389BBD25E47B80003A0F0A /* Peeps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Peeps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4389BC025E47B80003A0F0A /* Peeps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Peeps.h; sourceTree = "<group>"; };
 		B4389BC125E47B80003A0F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				B4389BCB25E47B80003A0F0A /* PersonTests.m */,
+				B424BFA925E5C6B6001C423D /* ClassClusterTests.m */,
 				B4389BCD25E47B80003A0F0A /* Info.plist */,
 			);
 			path = PeepsTests;
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4389BCC25E47B80003A0F0A /* PersonTests.m in Sources */,
+				B424BFAA25E5C6B6001C423D /* ClassClusterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

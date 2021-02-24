@@ -31,9 +31,8 @@
     self = [super init];
     if (!self) return nil;
     
-    // TODO: We should be copying these strings
-    _firstName = firstName;
-    _lastName = lastName;
+    _firstName = [firstName copy];
+    _lastName = [lastName copy];
     _age = age;
     
     _dog = [[Dog alloc] init];
@@ -47,7 +46,6 @@
 - (instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName {
     return [self initWithFirstName:firstName lastName:lastName age:0];
 }
-
 
 /// Lazily initializes a dog.
 - (Dog *)dog {
@@ -64,14 +62,14 @@
     return _firstName;
 }
 - (void)setFirstName:(NSString *)newValue {
-    _firstName = newValue; // TODO: cover memory management and mutability requirements.
+    _firstName = [newValue copy];
 }
 
 - (NSString *)lastName {
     return _lastName;
 }
 - (void)setLastName:(NSString *)newValue {
-    _lastName = newValue;
+    _lastName = [newValue copy];
 }
 
 - (NSString *)fullName {
