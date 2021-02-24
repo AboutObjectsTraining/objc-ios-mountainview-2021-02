@@ -3,11 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject {
-    NSString *_firstName;
-    NSString *_lastName;
-    NSInteger _age;
-}
+@interface Person : NSObject
 
 - (instancetype)initWithFirstName:(NSString *)firstName
                          lastName:(NSString *)lastName
@@ -16,15 +12,9 @@
 - (instancetype)initWithFirstName:(NSString *)firstName
                          lastName:(NSString *)lastName;
 
-- (NSString *)firstName;
-- (void)setFirstName:(NSString *)newValue;
-
-- (NSString *)lastName;
-- (void)setLastName:(NSString *)newValue;
-
-- (NSString *)fullName;
-
-- (NSInteger)age;
-- (void)setAge:(NSInteger)newValue;
+@property (copy, nonatomic) NSString *firstName;
+@property (copy, nonatomic) NSString *lastName;
+@property (readonly, nonatomic) NSString *fullName;
+@property (assign, nonatomic) NSInteger age;
 
 @end

@@ -69,7 +69,10 @@
     
     SEL barkSelector = @selector(bark);
     if ([fred respondsToSelector:barkSelector]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         [fred performSelector:barkSelector];
+#pragma clang diagnostic pop
     }
 }
 
