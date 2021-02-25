@@ -3,6 +3,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern const UIEdgeInsets CLNTextInsets;
+
 @interface CLNCoolCell : UIView
 
 @property (copy, nonatomic) NSString *text;

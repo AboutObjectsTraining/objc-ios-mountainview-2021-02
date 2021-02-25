@@ -3,6 +3,13 @@
 
 #import "CLNCoolCell.h"
 
+const UIEdgeInsets CLNTextInsets = {
+    .top = 7,
+    .bottom = 8,
+    .left = 12,
+    .right = 12
+};
+
 @interface CLNCoolCell ()
 @property (getter=isHighlighted, nonatomic) BOOL highlighted;
 @property (class, readonly, nonatomic) NSDictionary *textAttributes;
@@ -10,9 +17,36 @@
 
 @implementation CLNCoolCell
 
+// FIXME: Cover the initWithCoder: path.
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self == nil) return nil;
+
+    [self configureLayer];
+    [self configureGestureRecognizers];
+    
+    return self;
+}
+
+- (void)configureLayer {
+    self.layer.borderWidth = 3;
+    self.layer.borderColor = UIColor.whiteColor.CGColor;
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = 10;
+}
+
+- (void)configureGestureRecognizers {
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bounce)];
+    recognizer.numberOfTapsRequired = 2;
+    [self addGestureRecognizer:recognizer];
+}
+
+
 + (NSDictionary *)textAttributes {
     // TODO: cache an instance
-    return @{ NSFontAttributeName : [UIFont boldSystemFontOfSize:21],
+    return @{ NSFontAttributeName : [UIFont boldSystemFontOfSize:20],
               NSForegroundColorAttributeName : UIColor.whiteColor };
 }
 
@@ -21,11 +55,37 @@
     self.alpha = highlighted ? 0.5 : 1.0;
 }
 
+// MARK: - Animation
+
+- (void)bounce {
+    NSLog(@"In %s", __func__);
+    [self animateWithDuration:1 size:CGSizeMake(120, 240)];
+}
+
+- (void)configureAnimationWithSize:(CGSize)size {
+    CGAffineTransform translation = CGAffineTransformMakeTranslation(size.width, size.height);
+    self.transform = CGAffineTransformRotate(translation, M_PI_2);
+}
+
+- (void)animateWithDuration:(NSTimeInterval)duration size:(CGSize)size {
+    [UIView animateWithDuration:duration
+                     animations:^{ [self configureAnimationWithSize:size]; }
+                     completion:^(BOOL finished) { self.transform = CGAffineTransformIdentity; }];
+}
+
+
 // MARK: - Drawing and resizing
 
+- (CGSize)sizeThatFits:(CGSize)size {
+    CGSize newSize = [self.text sizeWithAttributes:self.class.textAttributes];
+    newSize.width += CLNTextInsets.left + CLNTextInsets.right;
+    newSize.height += CLNTextInsets.top + CLNTextInsets.bottom;
+    return newSize;
+}
+
 - (void)drawRect:(CGRect)rect {
-    // TODO: calculate the origin
-    [self.text drawAtPoint:CGPointZero withAttributes:self.class.textAttributes];
+    CGPoint origin = CGPointMake(CLNTextInsets.left, CLNTextInsets.top);
+    [self.text drawAtPoint:origin withAttributes:self.class.textAttributes];
 }
 
 

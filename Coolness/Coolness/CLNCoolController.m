@@ -19,6 +19,9 @@
     [self.view addSubview:cell1];
     [self.view addSubview:cell2];
     
+    [cell1 sizeToFit];
+    [cell2 sizeToFit];
+    
     cell1.backgroundColor = UIColor.systemPurpleColor;
     cell2.backgroundColor = UIColor.systemOrangeColor;
 }
