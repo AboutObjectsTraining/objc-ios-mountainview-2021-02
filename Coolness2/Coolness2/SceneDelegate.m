@@ -12,7 +12,7 @@ willConnectToSession:(UISceneSession *)session
 {
     self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
     self.window.backgroundColor = UIColor.yellowColor;
-    self.window.rootViewController = [[CLNCoolController alloc] init];
+    self.window.rootViewController = [[CLNCoolController alloc] initWithNibName:@"CoolStuff" bundle:nil];
     [self.window makeKeyAndVisible];
 }
 

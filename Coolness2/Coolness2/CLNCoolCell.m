@@ -10,6 +10,7 @@ const UIEdgeInsets CLNTextInsets = {
     .right = 12
 };
 
+IB_DESIGNABLE
 @interface CLNCoolCell ()
 @property (getter=isHighlighted, nonatomic) BOOL highlighted;
 @property (class, readonly, nonatomic) NSDictionary *textAttributes;
@@ -17,7 +18,16 @@ const UIEdgeInsets CLNTextInsets = {
 
 @implementation CLNCoolCell
 
-// FIXME: Cover the initWithCoder: path.
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self == nil) return nil;
+    
+    [self configureAppearance];
+    [self configureGestureRecognizers];
+    
+    return self;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -26,6 +36,7 @@ const UIEdgeInsets CLNTextInsets = {
 
     [self configureAppearance];
     [self configureGestureRecognizers];
+    self.backgroundColor = UIColor.systemBlueColor;
     
     return self;
 }
@@ -35,7 +46,6 @@ const UIEdgeInsets CLNTextInsets = {
     self.layer.borderColor = UIColor.whiteColor.CGColor;
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = 10;
-    self.backgroundColor = UIColor.systemBlueColor;
 }
 
 - (void)configureGestureRecognizers {

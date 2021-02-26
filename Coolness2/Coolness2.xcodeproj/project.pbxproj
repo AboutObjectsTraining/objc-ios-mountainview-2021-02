@@ -14,6 +14,7 @@
 		B424C05D25E876F7001C423D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B424C05725E876F7001C423D /* AppDelegate.m */; };
 		B424C05E25E876F7001C423D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B424C05825E876F7001C423D /* SceneDelegate.m */; };
 		B424C05F25E876F7001C423D /* CLNCoolController.m in Sources */ = {isa = PBXBuildFile; fileRef = B424C05925E876F7001C423D /* CLNCoolController.m */; };
+		B424C06925E96558001C423D /* CoolStuff.xib in Resources */ = {isa = PBXBuildFile; fileRef = B424C06825E96558001C423D /* CoolStuff.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B424C05925E876F7001C423D /* CLNCoolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNCoolController.m; sourceTree = "<group>"; };
 		B424C05A25E876F7001C423D /* CLNCoolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNCoolCell.h; sourceTree = "<group>"; };
 		B424C05B25E876F7001C423D /* CLNCoolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNCoolController.h; sourceTree = "<group>"; };
+		B424C06825E96558001C423D /* CoolStuff.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoolStuff.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				B424C05425E876F6001C423D /* CLNCoolCell.m */,
 				B424C05B25E876F7001C423D /* CLNCoolController.h */,
 				B424C05925E876F7001C423D /* CLNCoolController.m */,
+				B424C06825E96558001C423D /* CoolStuff.xib */,
 				B424C04525E87665001C423D /* Assets.xcassets */,
 				B424C04725E87665001C423D /* LaunchScreen.storyboard */,
 				B424C04A25E87665001C423D /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B424C04925E87665001C423D /* LaunchScreen.storyboard in Resources */,
+				B424C06925E96558001C423D /* CoolStuff.xib in Resources */,
 				B424C04625E87665001C423D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
