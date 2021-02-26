@@ -24,17 +24,18 @@ const UIEdgeInsets CLNTextInsets = {
     self = [super initWithFrame:frame];
     if (self == nil) return nil;
 
-    [self configureLayer];
+    [self configureAppearance];
     [self configureGestureRecognizers];
     
     return self;
 }
 
-- (void)configureLayer {
+- (void)configureAppearance {
     self.layer.borderWidth = 3;
     self.layer.borderColor = UIColor.whiteColor.CGColor;
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = 10;
+    self.backgroundColor = UIColor.systemBlueColor;
 }
 
 - (void)configureGestureRecognizers {
@@ -55,6 +56,11 @@ const UIEdgeInsets CLNTextInsets = {
     self.alpha = highlighted ? 0.5 : 1.0;
 }
 
+- (void)setText:(NSString *)text {
+    _text = [text copy];
+    [self sizeToFit];
+}
+
 // MARK: - Animation
 
 - (void)bounce {
@@ -63,8 +69,10 @@ const UIEdgeInsets CLNTextInsets = {
 }
 
 - (void)configureAnimationWithSize:(CGSize)size {
-    CGAffineTransform translation = CGAffineTransformMakeTranslation(size.width, size.height);
-    self.transform = CGAffineTransformRotate(translation, M_PI_2);
+    [UIView modifyAnimationsWithRepeatCount:5 autoreverses:YES animations:^{
+        CGAffineTransform translation = CGAffineTransformMakeTranslation(size.width, size.height);
+        self.transform = CGAffineTransformRotate(translation, M_PI_2);
+    }];
 }
 
 - (void)animateWithDuration:(NSTimeInterval)duration size:(CGSize)size {
